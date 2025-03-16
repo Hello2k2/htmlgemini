@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Công cụ Gemini AI</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { color: #333; }
+        input { padding: 8px; width: 70%; }
+        button { padding: 8px 16px; background-color: #007bff; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+        #responseArea { margin-top: 20px; padding: 10px; border: 1px solid #ccc; line-height: 1.5; }
+    </style>
+</head>
+<body>
+    <h1>Hỏi Gemini AI</h1>
+    <p>Nhập câu hỏi để nhận phản hồi từ Gemini:</p>
+    <input type="text" id="userInput" placeholder="Nhập câu hỏi của bạn">
+    <button onclick="fetchResponse()">Lấy phản hồi</button>
+    <div id="responseArea">
+        <p>Phản hồi sẽ hiện ở đây...</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
