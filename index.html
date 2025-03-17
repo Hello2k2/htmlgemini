@@ -5,12 +5,14 @@
     <title>Công cụ Gemini AI</title>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
-        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
-        h1 { color: #333; }
-        input { padding: 8px; width: 70%; }
-        button { padding: 8px 16px; background-color: #007bff; color: white; border: none; cursor: pointer; }
-        button:hover { background-color: #0056b3; }
-        #responseArea { margin-top: 20px; padding: 10px; border: 1px solid #ccc; line-height: 1.5; }
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f5f5f5; }
+        h1 { color: #2c3e50; text-align: center; }
+        input { padding: 10px; width: 70%; border: 1px solid #ddd; border-radius: 4px; }
+        button { padding: 10px 20px; margin-left: 10px; background-color: #3498db; color: white; border: none; border-radius: 4px; cursor: pointer; }
+        button:hover { background-color: #2980b9; }
+        #responseArea { margin-top: 20px; padding: 15px; border: 1px solid #ddd; background-color: white; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        #readButton { background-color: #27ae60; }
+        #readButton:hover { background-color: #219653; }
     </style>
 </head>
 <body>
@@ -21,6 +23,7 @@
     <div id="responseArea">
         <p>Phản hồi sẽ hiện ở đây...</p>
     </div>
+    <button id="readButton" onclick="readResponse()">Đọc to</button>
 
     <script src="script.js"></script>
 </body>
