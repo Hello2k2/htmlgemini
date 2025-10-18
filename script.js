@@ -28,7 +28,18 @@ async function fetchResponse() {
             body: JSON.stringify(requestBody)
         });
 
-        if (!response.ok) throw new Error('Yêu cầu API thất bại');
+        if (!response.ok) {
+            // Nếu phản hồi KHÔNG thành công, lấy mã trạng thái (ví dụ: 403, 404)
+            const errorStatus = response.status; 
+            
+            // Đọc nội dung phản hồi (thường là JSON) để lấy thông báo chi tiết của Google
+            const errorData = await response.json().catch(() => ({ message: 'Không thể đọc phản hồi lỗi.' }));
+            const errorMessage = errorData.error ? errorData.error.message : 'Lỗi không xác định từ API.';
+
+            // Ném ra một lỗi mới bao gồm Mã HTTP và thông báo chi tiết
+            throw new Error(`HTTP ${errorStatus}: ${errorMessage}`);
+        }
+        // KẾT THÚC CHỈNH SỬA Ở ĐÂY
 
         const data = await response.json();
         lastGeneratedText = data.candidates[0].content.parts[0].text; // Lưu văn bản gốc
