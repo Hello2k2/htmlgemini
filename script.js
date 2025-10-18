@@ -12,7 +12,7 @@ async function fetchResponse() {
     responseArea.innerHTML = '<p>Đang lấy phản hồi...</p>';
 
     try {
-        const apiKey = 'AIzaSyDmBt728OCCZ4NXQDoMhX1MVOqlYFK9QhQ'; // **HÃY THAY THẾ BẰNG API KEY THỰC CỦA BẠN**
+        const apiKey = 'AIzaSyB_1mrLa4AN8TNmUGEWpxpsF-aZRsbehSo'; // **HÃY THAY THẾ BẰNG API KEY THỰC CỦA BẠN**
         const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-pro-exp:generateContent?key=${apiKey}`;
 
         const requestBody = {
